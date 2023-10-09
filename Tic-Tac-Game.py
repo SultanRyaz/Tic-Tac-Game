@@ -10,4 +10,6 @@ def print_scheme():
     print(scheme[6], end=" ")
     print(scheme[7], end=" ")
     print(scheme[8])
+
 scheme = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+

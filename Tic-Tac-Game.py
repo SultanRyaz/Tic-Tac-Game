@@ -54,6 +54,10 @@ while end_game == False:
     else:
         end_game = False
 
+print_scheme()
+print("Победил игрок", victory+1)
+
+
 def move_scheme(move, symbol):
     ind = scheme.index(move)
     scheme[ind] = symbol

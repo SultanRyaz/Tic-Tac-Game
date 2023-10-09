@@ -10,6 +10,7 @@ def print_scheme():
     print(scheme[6], end=" ")
     print(scheme[7], end=" ")
     print(scheme[8])
+
 scheme = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 end_game = False
@@ -32,6 +33,7 @@ def get_result():
 
 scheme = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 wins = [[3, 4, 5], [0, 1, 2], [6, 7, 8], [2, 4, 6], [0, 3, 6], [2, 5, 8], [1, 4, 7], [0, 4, 8]]
+step = 0
 
 while end_game == False:
 
@@ -61,4 +63,5 @@ print("Победил игрок", victory+1)
 def move_scheme(move, symbol):
     ind = scheme.index(move)
     scheme[ind] = symbol
+
 

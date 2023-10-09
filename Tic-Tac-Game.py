@@ -32,3 +32,29 @@ def get_result():
 
 scheme = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 wins = [[3, 4, 5], [0, 1, 2], [6, 7, 8], [2, 4, 6], [0, 3, 6], [2, 5, 8], [1, 4, 7], [0, 4, 8]]
+
+while end_game == False:
+
+    print_scheme()
+
+    if step == 0:
+        symbol = players[step]
+        move = int(input("Игрок 1, ваш ход: "))
+        step = 1
+    else:
+        symbol = players[step]
+        move = int(input("Игрок 2, ваш ход: "))
+        step = 0
+
+    move_scheme(move, symbol)
+    victory = get_result()
+    if victory != "":
+        end_game = True
+        victory = players.index(victory)
+    else:
+        end_game = False
+
+def move_scheme(move, symbol):
+    ind = scheme.index(move)
+    scheme[ind] = symbol
+

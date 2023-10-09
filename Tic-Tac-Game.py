@@ -18,3 +18,17 @@ if player1 == "X":
     players = ["X", "0"]
 if player1 == "0":
     players = ["0", "X"]
+
+def get_result():
+    victory = ""
+
+    for i in wins:
+        if scheme[i[0]] == "X" and scheme[i[1]] == "X" and scheme[i[2]] == "X":
+            victory = "X"
+        elif scheme[i[0]] == "0" and scheme[i[1]] == "0" and scheme[i[2]] == "0":
+            victory = "0"
+
+    return victory
+
+scheme = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+wins = [[3, 4, 5], [0, 1, 2], [6, 7, 8], [2, 4, 6], [0, 3, 6], [2, 5, 8], [1, 4, 7], [0, 4, 8]]
